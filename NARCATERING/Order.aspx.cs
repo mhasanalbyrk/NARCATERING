@@ -14,7 +14,7 @@ namespace NARCATERING
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -80,9 +80,7 @@ namespace NARCATERING
         {
             GridView1.DataSourceID = string.Empty;
             DataSet ds = new DataSet();
-            string sql = "select * " +
-                         "from Order" +
-                         " order by CompanyName";
+            string sql = "select * from [Order] order by OrderID";
 
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             da.Fill(ds);
@@ -90,6 +88,10 @@ namespace NARCATERING
             GridView1.DataBind();
 
 
+        }
+
+        protected void Button3_Click(object sender, EventArgs e) {
+            Response.Redirect("Explorer.aspx");
         }
     }
 }

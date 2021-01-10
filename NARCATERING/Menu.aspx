@@ -9,8 +9,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Back" />
         </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MenuID" DataSourceID="Menus">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MenuID" DataSourceID="Menus" HorizontalAlign="Right">
             <Columns>
                 <asp:BoundField DataField="MenuID" HeaderText="MenuID" ReadOnly="True" SortExpression="MenuID" />
                 <asp:BoundField DataField="Meal1" HeaderText="Meal1" SortExpression="Meal1" />
@@ -20,33 +21,35 @@
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="Menus" runat="server" ConnectionString="<%$ ConnectionStrings:NARCATERINGConnectionString %>" SelectCommand="SELECT * FROM [Menu_Course]"></asp:SqlDataSource>
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-        <asp:Label ID="Label1" runat="server" Text="Menu ID"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Menu ID" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox7" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
-        <asp:Label ID="Label2" runat="server" Text="Cost"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Cost" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox8" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
-        <asp:Label ID="Label3" runat="server" Text="Menu Type"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="Menu Type" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox9" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Update Menu" />
+        <asp:Button ID="Button1" runat="server" Text="Update Menu" Height="25px" Width="250px" />
         <br />
-        <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
-        <asp:Label ID="Label4" runat="server" Text="Menu ID"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
-        <asp:Label ID="Label5" runat="server" Text="Meal 1"></asp:Label>
         <br />
-        <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox>
-        <asp:Label ID="Label6" runat="server" Text="Meal 2"></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Menu ID" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox10" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox>
-        <asp:Label ID="Label7" runat="server" Text="Meal 3"></asp:Label>
+        <asp:Label ID="Label5" runat="server" Text="Meal 1" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox11" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox14" runat="server"></asp:TextBox>
-        <asp:Label ID="Label8" runat="server" Text="Meal 4"></asp:Label>
+        <asp:Label ID="Label6" runat="server" Text="Meal 2" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox12" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:Button ID="Button2" runat="server" Text="Add Course" />
+        <asp:Label ID="Label7" runat="server" Text="Meal 3" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox13" runat="server" Width="150px"></asp:TextBox>
+        <br />
+        <asp:Label ID="Label8" runat="server" Text="Meal 4" Height="25px" Width="100px"></asp:Label>
+        <asp:TextBox ID="TextBox14" runat="server" Width="150px"></asp:TextBox>
+        <br />
+        <asp:Button ID="Button2" runat="server" Text="Add Course" Height="25px" Width="250px" />
     </form>
 </body>
 </html>
