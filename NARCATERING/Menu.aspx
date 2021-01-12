@@ -30,7 +30,8 @@
         <asp:Label ID="Label3" runat="server" Text="Menu Type" Height="25px" Width="100px"></asp:Label>
         <asp:TextBox ID="TextBox9" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Update Menu" Height="25px" Width="250px" />
+        <asp:Button ID="Button1" runat="server" Text="Update Menu" Height="25px" Width="250px" OnClick="Button1_Click" />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Add Menu" />
         <br />
         <br />
         <br />
@@ -49,7 +50,7 @@
         <asp:Label ID="Label8" runat="server" Text="Meal 4" Height="25px" Width="100px"></asp:Label>
         <asp:TextBox ID="TextBox14" runat="server" Width="150px"></asp:TextBox>
         <br />
-        <asp:Button ID="Button2" runat="server" Text="Add Course" Height="25px" Width="250px" />
+        <asp:Button ID="Button2" runat="server" Text="Update Course" Height="25px" Width="250px" OnClick="Button2_Click" />
     </form>
 </body>
 </html>
