@@ -45,7 +45,7 @@ namespace NARCATERING
             cmd.Parameters.Add("@BirthDate", SqlDbType.SmallDateTime).Value = DateTime.ParseExact(TextBox4.Text, "yyyy/MM/dd", CultureInfo.InvariantCulture); 
             cmd.Parameters.Add("@Age", SqlDbType.SmallInt).Value = TextBox5.Text;
             cmd.Parameters.Add("@Salary", SqlDbType.Int).Value = TextBox6.Text;
-            cmd.Parameters.Add("@TelephoneNumber", SqlDbType.Int).Value = TextBox7.Text;
+            cmd.Parameters.Add("@TelephoneNumber", SqlDbType.BigInt).Value = TextBox7.Text;
             cmd.Parameters.Add("@Insurence", SqlDbType.NVarChar).Value = TextBox8.Text;
             cmd.Parameters.Add("@NumberOfChildren", SqlDbType.SmallInt).Value = TextBox9.Text;
             cmd.Parameters.Add("@EmployeeType", SqlDbType.NVarChar).Value = TextBox10.Text;
@@ -98,6 +98,10 @@ namespace NARCATERING
             GridView1.DataBind();
 
 
+        }
+
+        protected void Button3_Click(object sender, EventArgs e) {
+            Response.Redirect("Explorer.aspx");
         }
     }
 }
