@@ -15,19 +15,21 @@
         <br />
         <asp:Label ID="Label1" runat="server" Text="Company Name"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label4" runat="server" Text="Telephone"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Text="Address"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label3" runat="server" Text="Debt"></asp:Label>
         <br />
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
+        <asp:Label ID="Label4" runat="server" Text="Telephone"></asp:Label>
+        <br />
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Address"></asp:Label>
+        <br />
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Debt"></asp:Label>
+        <br />
         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         <br />
-        <br />
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Add" />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CompanyName" DataSourceID="Companies" HorizontalAlign="Center">
             <Columns>
                 <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" ReadOnly="True" SortExpression="CompanyName" />
@@ -36,6 +38,8 @@
                 <asp:BoundField DataField="Debt" HeaderText="Debt" SortExpression="Debt" />
             </Columns>
         </asp:GridView>
+        <br />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Add" />
         <asp:SqlDataSource ID="Companies" runat="server" ConnectionString="<%$ ConnectionStrings:NARCATERINGConnectionString %>" SelectCommand="SELECT * FROM [Company]"></asp:SqlDataSource>
     </form>
 </body>

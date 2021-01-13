@@ -38,7 +38,7 @@ namespace NARCATERING
 
 
             string sqlStr = "insert into Company " +
-                            "values('" + TextBox1.Text + "', " + TextBox2.Text + ",  '" + TextBox3.Text + "'  " + TextBox4.Text + ")";
+                            "values('" + TextBox1.Text + "', " + TextBox2.Text + ",  '" + TextBox3.Text + "' , " + TextBox4.Text + ")";
             SqlCommand da = new SqlCommand(sqlStr, cnn);
             da.ExecuteNonQuery();
 

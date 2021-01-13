@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -115,6 +115,60 @@ namespace NARCATERING
 
         protected void Button4_Click(object sender, EventArgs e) {
             Response.Redirect("Explorer.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["NARCATERINGConnectionString"].ToString();
+            SqlConnection cnn = new SqlConnection(connectionString);
+
+            try
+            {
+                cnn.Open();
+            }
+            catch (Exception)
+            {
+                cnn.Close();
+                return;
+
+            }
+            GridView1.DataSourceID = string.Empty;
+            DataSet ds = new DataSet();
+            string sql = "select * from Delivery order by Date";
+
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            da.Fill(ds);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["NARCATERINGConnectionString"].ToString();
+            SqlConnection cnn = new SqlConnection(connectionString);
+
+            try
+            {
+                cnn.Open();
+            }
+            catch (Exception)
+            {
+                cnn.Close();
+                return;
+
+            }
+
+            GridView1.DataSourceID = string.Empty;
+            DataSet ds = new DataSet();
+            string sql = "SELECT DeliveryID, OrderID, Address, Date FROM Delivery  WHERE(" +
+                         "CAST(Date AS DATE) = CAST(GETDATE() AS DATE)" +
+                         ")";
+            //CAST(@DATETIMEVALUE1 as DATE) = CAST(@DATETIMEVALUE2 as DATE)
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            da.Fill(ds);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+
         }
     }
 }
